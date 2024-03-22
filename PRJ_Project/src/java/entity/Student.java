@@ -4,38 +4,57 @@
  */
 package entity;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author User
  */
 public class Student extends BaseEntity {
-    private int id;
-    private String name;
-    private Boolean gender;
+    private int stid;
+    private String stname;
+    private Date stdob;
+    private Boolean stgender;
+    private ArrayList<Group> groups = new ArrayList<>();
 
-    public int getId() {
-        return id;
+    public Date getStdob() {
+        return stdob;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setStdob(Date stdob) {
+        this.stdob = stdob;
     }
 
-    public String getName() {
-        return name;
+    public int getStid() {
+        return stid;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStid(int stid) {
+        this.stid = stid;
     }
 
-    public Boolean getGender() {
-        return gender;
+    public String getStname() {
+        return stname;
     }
 
-    public void setGender(Boolean gender) {
-        this.gender = gender;
+    public ArrayList<Group> getGroups() {
+        return groups;
     }
-    
-    
+
+    public void setGroups(ArrayList<Group> groups) {
+        this.groups = groups;
+    }
+
+    public void setStname(String stname) {
+        this.stname = stname;
+    }
+
+    public Boolean getStgender() {
+        return stgender;
+    }
+
+    public void setStgender(Boolean stgender) {
+        this.stgender = stgender;
+    } 
 }

@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package entity;
+package entity.Login;
+
+import entity.BaseEntity;
 
 /**
  *
@@ -12,6 +14,17 @@ public class Account extends BaseEntity {
     private String username;
     private String password;
     private String displayname;
+    private Role roles ;
+
+    public Role getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Role roles) {
+        this.roles = roles;
+    }
+
+    
 
     public String getUsername() {
         return username;

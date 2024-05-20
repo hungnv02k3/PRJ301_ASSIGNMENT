@@ -41,28 +41,13 @@ public class AccountDBContext extends DBContext<Account> {
 
     @Override
     public Account get(Account entity) {
-         try {
-            String sql = "SELECT username,displayname FROM Account\n"
-                    + "WHERE username = ? AND [password] = ?";
-            PreparedStatement stm = connection.prepareStatement(sql);
-            stm.setString(1, entity.getUsername());
-            stm.setString(2, entity.getPassword());
-            ResultSet rs = stm.executeQuery();
-            if (rs.next()) {
-                Account account = new Account();
-                account.setUsername(rs.getString("username"));
-                account.setDisplayname(rs.getString("displayname"));
-                return account;
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(AccountDBContext.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException ex) {
-                Logger.getLogger(AccountDBContext.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        
+        
+        
+        
+        
+        
+         
         return null;
     }
      public ArrayList<Role> getRoles(String username) {
